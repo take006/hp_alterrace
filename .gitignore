@@ -6,7 +6,3 @@ db/
 # その他
 directory.md
 README.md
-
-.env
-vendor/
-node_modules/
