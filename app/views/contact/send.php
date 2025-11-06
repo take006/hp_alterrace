@@ -2,9 +2,20 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require dirname(__DIR__, 3) . '/vendor/autoload.php'; // Composer の autoload を読み込む
+// サーバー名で環境を判定
+$isLocal = ($_SERVER['SERVER_NAME'] === 'localhost' || strpos($_SERVER['SERVER_NAME'], '127.0.0.1') !== false);
+
+// autoloadの読み込み
+if ($isLocal) {
+    // ローカル (例: XAMPP)
+    require dirname(__DIR__, 3) . '/vendor/autoload.php';
+} else {
+    // 本番 (例: StarServer)
+    require dirname(__DIR__, 4) . '/vendor/autoload.php';
+}
 
 session_start();
+
 
 // セッションからデータを取得
 $firstName = $_SESSION['firstName'] ?? '';
