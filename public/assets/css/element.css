@@ -1,0 +1,152 @@
+.gradient-border-button {
+  /* ボタンの基本設定 */
+  display: inline-flex; /* 子要素を横並びに配置 */
+  align-items: center; /* 垂直方向で中央揃え */
+  justify-content: center; /* 水平方向で中央揃え */
+  position: relative;
+  padding: 1rem 3rem;
+  background: linear-gradient(90deg, rgba(12, 152, 239, 1) 0%, rgba(148, 187, 233, 1) 100%);
+  border-radius: 80px; /* 角丸を大きく */
+  text-decoration: none;
+  font-size: 18px; /* 文字サイズを大きめに */
+  color: #333;
+  text-align: center;
+  transition: all 0.3s ease;
+  white-space: nowrap; /* テキストを折り返さない */
+  box-sizing: border-box;
+}
+
+.gradient-border-button::before {
+  /* 内側の背景 */
+  content: "";
+  display: block;
+  position: absolute;
+  top: 3px; /* ボーダーの厚みを調整 */
+  left: 3px;
+  right: 3px;
+  bottom: 3px;
+  background: #fff; /* 内側の背景色 */
+  border-radius: 80px;
+  z-index: 0;
+}
+
+.gradient-border-button span {
+  /* テキスト部分 */
+  position: relative;
+  z-index: 1;
+  font-size: 18px; /* フォントサイズを調整 */
+}
+
+
+/* ホバー時の効果 */
+.gradient-border-button:hover {
+  color: #fff; /* テキストカラーを変更 */
+}
+
+.gradient-border-button:hover::before {
+  background: linear-gradient(90deg, rgba(12, 152, 239, 0.8) 0%, rgba(148, 187, 233, 0.8) 100%);
+}
+
+/* スマホ版のスタイル調整 */
+@media (max-width: 480px) {
+  .gradient-border-button {
+    padding: 15px 30px; /* スマホ用に余白を調整 */
+    font-size: 16px; /* フォントサイズをやや小さく */
+    border-radius: 60px;
+  }
+
+  .gradient-border-button span {
+    font-size: 16px;
+  }
+
+  .gradient-border-button span::after {
+    width: 8px; /* 矢印サイズを調整 */
+    height: 8px;
+    margin-left: 8px; /* 間隔も調整 */
+  }
+}
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+
+/* ヘッダーメニューのボタン */
+.gradient_button {
+  display: inline-flex; /* 子要素を横並びに配置 */
+  align-items: center; /* 垂直方向で中央揃え */
+  justify-content: center; /* 水平方向で中央揃え */
+  position: relative;
+  background: linear-gradient(90deg, rgba(12, 152, 239, 1) 0%, rgba(148, 187, 233, 1) 100%);
+  border-radius: 80px; /* 角丸を大きく */
+  color: #333;
+  text-align: center;
+  transition: all 0.3s ease;
+  white-space: nowrap; /* テキストを折り返さない */
+
+  box-sizing: border-box;
+}
+
+.gradient_button .btnText {
+  /* テキスト部分 */
+  position: relative;
+  z-index: 1;
+  font-size: 13px; /* フォントサイズを調整 */
+}
+
+
+.samll_button {
+  padding: .5rem 1.5rem;
+}
+.samll_button .btnText {
+  font-size: 13px;
+}
+.middle_button {
+  padding: 1rem 2.5rem;
+}
+.middle_button .btnText {
+  font-size: 18px;
+}
+.large_button {
+  padding: 1.5rem 3.5rem;
+}
+.large_button .btnText {
+  font-size: 24px;
+}
+
+.header_button {
+  padding: 15px 30px;
+  margin-left: 20px;
+}
+.header_button .btnText {
+  font-size: 18px;
+}
+
+.gradient_button::before {
+  /* 内側の背景 */
+  content: "";
+  display: block;
+  position: absolute;
+  top: 2px; /* ボーダーの厚みを調整 */
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  background: #fff; /* 内側の背景色 */
+  border-radius: 80px;
+  z-index: 0;
+}
+
+
+/* ホバー時の効果 */
+.gradient_button:hover {
+  color: #fff; /* テキストカラーを変更 */
+}
+
+.gradient_button:hover::before {
+  background: linear-gradient(90deg, rgba(12, 152, 239, 0.8) 0%, rgba(148, 187, 233, 0.8) 100%);
+}

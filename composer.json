@@ -1,0 +1,7 @@
+{
+  "name": "alterrace/project",
+  "description": "A simple PHP project",
+  "require": {
+    "phpmailer/phpmailer": "^6.9"
+  }
+}

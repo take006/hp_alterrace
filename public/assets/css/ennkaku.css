@@ -1,0 +1,59 @@
+/* 紹介文 */
+.page-title-wrapper {
+  background-image: url(../../assets/images/other_images/company-meeting-unsplash.jpg);
+}
+
+.main-wrapper p {
+  text-align: center;
+}
+
+/* テーブル */
+.table-wrapper {
+  max-width: 1000px;
+  margin: 100px auto;
+}
+
+@media (max-width: 480px) {
+  .table-wrapper {
+    max-width: 95%;
+  }
+}
+.table-wrapper h3 {
+  text-align: center;
+  font-size: 32px;
+  padding: 100px 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+tbody {
+  display: table-row-group;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+  border-color: inherit;
+}
+
+tr {
+  display: table-row;
+  vertical-align: inherit;
+  unicode-bidi: isolate;
+  border-color: inherit;
+}
+
+table th {
+  width: 180px;
+  font-weight: 500;
+}
+
+table td {
+  border-bottom: solid 1px #CCCCCC;
+  text-align-last: left;
+  padding: 25px 0 25px 36px;
+}
+
+.table {
+  padding: 0 1rem;
+}

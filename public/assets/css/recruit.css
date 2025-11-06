@@ -1,0 +1,135 @@
+
+.page-title-wrapper {
+  background-image: url(../../assets/images/other_images/hunters-race-MYbhN8KaaEc-unsplash.jpg);
+}
+
+/* body {
+  background-color: var(--whiteSmoke);
+} */
+
+#main {
+  margin: 200px 0 100px 0; 
+}
+/* コンテンツ */
+.content-box img {
+  width: 50%;
+  height: auto;
+}
+
+.content-box {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  padding: auto 0;
+}
+.img-box {
+  background-image: url(../recruit/img/recriut_page_img.avif);
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 50%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  background-size: cover;
+}
+
+.content-box .text-box {
+  width: 50%;
+  height: auto;
+}
+.text-box {
+  padding-right: 3rem;
+}
+
+
+.text-box h4 {
+  font-size: 24px;
+}
+
+/* right */
+.main-wrapper_right {
+  background-color: var(--cWhite);
+  max-width: 70%;
+  margin: 0px auto;
+  padding: 100px 0px;
+}
+
+.main-wrapper_right h3 {
+  text-align: right;
+}
+.main-wrapper_right h5 {
+  text-align: right;
+}
+.main-wrapper_right p {
+  padding-top: 10px;
+  font-size: 18px;
+  text-align: left;
+}
+
+.content-box_right {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+.content-box_right img {
+  width: 50%;
+  height: auto;
+}
+
+.text-box_right {
+  padding-left: 3rem;
+}
+
+.text-box_right h4 {
+  font-size: 24px;
+}
+
+.text-box_right p {
+  font-size: 18px;
+}
+
+/* left */
+.main-wrapper_left {
+  background-color: var(--cWhite);
+  max-width: 70%;
+  margin: 0px auto;
+  padding: 100px 0px;
+}
+
+.main-wrapper_left h3 {
+  font-size: 32px;
+}
+.main-wrapper_left p {
+  padding-top: 10px;
+  font-size: 18px;
+}
+
+.content-box_left {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+.content-box_left img {
+  width: 50%;
+  height: auto;
+}
+
+.text-box_left {
+  padding-right: 3rem;
+}
+
+.text-box_left h4 {
+  font-size: 24px;
+}
+
+.text-box_left p {
+  font-size: 18px;
+}
+
+.recruit-btn-inner {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.recruit-btn-inner a {
+  margin: 0 auto;
+}

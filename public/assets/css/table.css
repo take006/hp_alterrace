@@ -1,0 +1,62 @@
+/* テーブル */
+.table-wrapper {
+  max-width: 1000px;
+  margin: 0 20%;
+}
+
+.table-wrapper h3 {
+  text-align: center;
+  font-size: 32px;
+  padding: 100px 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+tbody {
+  display: table-row-group;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+  border-color: inherit;
+}
+
+tr {
+  display: table-row;
+  vertical-align: inherit;
+  unicode-bidi: isolate;
+  border-color: inherit;
+}
+
+table th {
+  width: 180px;
+  text-align: left;
+  letter-spacing: 2px;
+  font-weight: 300;
+}
+
+table td {
+  border-bottom: solid 1px #CCCCCC;
+  text-align-last: left;
+  padding: 18px 0;
+}
+
+@media (max-width:480px){
+  tbody {
+    font-size: 12px;
+  }
+  .main-wrapper {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  .table-wrapper {
+    max-width: 95%;
+    margin: 0;
+  }
+  table th {
+    width: 100px;
+    margin: 0;
+  }
+}

@@ -1,0 +1,41 @@
+.page-title-wrapper {
+  background-image: url(../../assets/images/other_images/company-building-unsplash.jpg);
+}
+
+.main-wrapper h3 {
+  text-align: center;
+}
+
+/* 画面幅が768px以下の場合 */
+@media (max-width: 768px) {
+  .main-wrapper {
+      max-width: 80%;
+  }
+}
+
+/* 画面幅が480px以下の場合 */
+@media (max-width: 480px) {
+  .main-wrapper {
+      max-width: 90%;
+      padding: 50px 0;
+  }
+}
+
+
+.ceo {
+  margin-top: 50px;
+  font-size: 18px;
+  text-align: center;
+}
+
+@media (max-width:768px) {
+  .main-wrapper h3 {
+    font-size: 24px;
+  }
+  .main-wrapper p {
+    font-size: 14px;
+  }
+}
+
+
+

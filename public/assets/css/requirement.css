@@ -1,0 +1,62 @@
+.page-title-wrapper {
+  background-image: url(../../assets/images/other_images/company_sign-unsplash.jpg);
+}
+
+
+td p {
+  font-size: 16px;
+}
+
+th {
+  font-weight: 900;
+}
+
+.T-tile {
+  margin: 100px auto;
+}
+
+.table-wrapper {
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  padding: 3rem 3rem;
+}
+
+.tag {
+  font-size: 14px;
+  color: #007bff;
+  padding: 0 1rem;
+  border: solid 1px #007bff;
+  margin-top: 1rem;
+  margin-right: .5rem;
+}
+
+
+#requirement-box-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin: 0 10%;
+}
+
+.requirement-box {
+  width: 100%;
+  height: auto;
+  background: #fff;
+  border-radius: .625em;
+  box-shadow: 0 .625em 1.25em 0 rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+.requirement-box a img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+
+.text-wrapper {
+  margin: 1rem 2rem;
+}
+.text-wrapper p{
+  margin-bottom: 1rem;
+}

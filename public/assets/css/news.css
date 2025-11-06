@@ -1,0 +1,152 @@
+@charset "utf-8";
+
+
+.page-title-wrapper {
+  background-image: url(../../assets/images/other_images/news/news_img.jpg);
+}
+
+/* ここからNews */
+.news-wrapper {
+  background-color: white;
+  margin: 0 auto;
+  max-width: 70%;
+}
+
+.n-title-inner {
+  font-size: medium;
+  text-align: center;
+}
+.n-section-main-title {
+  color: #000;
+  letter-spacing: 0.2rem;
+}
+
+.n-sub-title {
+  color: #000;
+  font-size: 15px;
+  padding-top: 1rem;
+}
+.news-list {
+  list-style: none;
+  margin: 0 auto;
+}
+
+.news-list_item {
+  display: flex;
+  border-bottom: 1px solid #CACDCD;
+}
+
+.news-list_item:hover {
+  display: flex;
+  opacity: 0.9;
+  border-bottom: 1px solid var(--main-color-blue-o);
+}
+
+.news-list_item_link {
+  text-decoration: none;
+  color: #000;
+  margin: 20px 0;
+  cursor: pointer;
+}
+
+.news-list_item_link:hover {
+  color: rgb(45,69,157);
+  background-color: #fff;
+  font-size: 102%;
+  transition: font-size 0.2s ease-in-out;
+}
+
+.news-list_item_date {
+  display: flex;
+  align-items: center;
+  color: gray;
+  font-size: 15px;
+}
+
+.news_item_tag {
+  background-color: #393939;
+  color: white;
+  padding: 0.2em 1.5em;
+  margin: 0px 2em;
+  font-size: 12px;
+  box-shadow: 0px 5px 5px -5px rgba(0,0,0,0.5);
+  border-radius: 5px;
+}
+
+.news_item_text {
+  display: block;
+  margin-top: 8px;
+  position: relative;
+  font-size: 16px;
+}
+
+.news-list_item_link::after {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border: 0;
+  border-top: solid 2px #fff;
+  border-right: solid 2px #fff;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 0;
+  right: 20px;
+  bottom: 0;
+  margin: auto;
+}
+
+.news-btn-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0 50px;
+}
+
+#pagenation {
+  margin-top: 5rem;
+}
+
+body { font-family: Arial, sans-serif; }
+.news-container { 
+    margin: auto; 
+}
+.news-item { 
+  padding: 2rem 2rem;
+}
+
+
+.news-item:hover{ 
+  background-color: #e6e6fa8c;
+}
+.news-date { color: #888; }
+.news-title { 
+  font-size: 18px; 
+  font-weight: bold;
+}
+.news-title a { 
+  color: var(--cBlack);
+}
+.news-content { font-size: 14px; color: #333; }
+.news-tags { font-size: 14px; color: var(--cBlack); }
+
+.news_btn {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.upper-container {
+  display: flex;
+  align-items: center;
+}
+
+.news-tag { 
+  font-size: 14px;
+  color: #007bff;
+  padding: 0 .5rem;
+  border: solid 1px #007bff;
+  margin-left: 1rem;
+}
+
+.news-container h2 {
+  margin-bottom: 2rem;
+}

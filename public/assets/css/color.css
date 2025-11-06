@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+:root {
+  --cWhite: white;
+  --cBlack01: #07070d;
+  --cBlack: #2d3133;
+  --darkGray: #2d3133;
+  --main-color-blue: rgb(45,69,157);
+  /* #00459d */
+  --main-color-blue-o: rgb(45,69,157,0.5);
+  --main-color-green: rgb(129,200,166);
+  --main-color-yellow: rgb(252,238,48);
+  --orange: #FF784B;
+
+  --main-color-gray: #1f2533;
+  --font-color:#34495e;
+  --light-gray: #dcdcdc;
+  --whiteSmoke: #f5f5f5;
+  --red:red;
+  --iceblue: #f3f8fb;
+  --lavender:#e6e6fa;
+  }

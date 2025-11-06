@@ -1,0 +1,12 @@
+# 全体を無視
+config/
+libs/
+db/
+.vscode/
+# その他
+directory.md
+README.md
+
+.env
+vendor/
+node_modules/

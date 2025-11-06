@@ -1,0 +1,44 @@
+/* 紹介文 */
+.main-wrapper h3 {
+  font-size: 32px;
+  text-align: center;
+}
+
+.main-wrapper p {
+  padding-top: 30px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.page-title-wrapper {
+  background-image: url(../../assets/images/other_images/company_sign-unsplash.jpg);
+}
+
+
+/* アクセス */
+#access {
+  width: 100%;
+  height: auto;
+}
+.access-wrapper {
+  background-color: white;
+  padding: 10rem 10vw 0;
+  max-width: 100vw;
+  margin: 0 auto 50px;
+}
+.inframe-wrapper {
+  text-align: center;
+  width: 100%;
+}
+
+.inframe-wrapper iframe {
+  width: 90%;
+  height: 550px;
+}
+
+.address-box {
+  margin-top: 50px;
+  background-color: lightgray;
+  border-radius: 10px;
+  padding: 20px 10px;
+}
