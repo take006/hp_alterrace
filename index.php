@@ -6,8 +6,8 @@ error_reporting(E_ALL);
 
 <?php
   // config.php を読み込む
-include __DIR__ . '/../config/config.php';
-require_once __DIR__ . '/../config/database.php';
+include __DIR__ . '/config/config.php';
+require_once __DIR__ . '/config/database.php';
 
 try {
 $pdo = getPDO();
@@ -31,20 +31,20 @@ $newsList = $stmt->fetchAll(PDO::FETCH_ASSOC);
   <title>アルテラス株式会社</title>
 
   <!-- CSS（BASE_URLを適用） -->
-  <link rel="stylesheet" href="<?= BASE_URL ?>public/assets/css/resetting.css">
-  <link rel="stylesheet" href="<?= BASE_URL ?>public/assets/css/default.css">
-  <link rel="stylesheet" href="<?= BASE_URL ?>public/assets/css/color.css">
-  <link rel="stylesheet" href="<?= BASE_URL ?>public/assets/css/header.css">
-  <link rel="stylesheet" href="<?= BASE_URL ?>public/assets/css/footer.css">
-  <link rel="stylesheet" href="<?= BASE_URL ?>public/assets/css/element.css">
-  <link rel="stylesheet" href="<?= BASE_URL ?>public/assets/css/index.css">
-  <link rel="stylesheet" href="<?= BASE_URL ?>public/assets/css/scrollTop.css">
+  <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/resetting.css">
+  <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/default.css">
+  <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/color.css">
+  <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/header.css">
+  <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/footer.css">
+  <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/element.css">
+  <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/index.css">
+  <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/scrollTop.css">
 </head>
 <body>
   <!-- ヘッダー -->
   <section id="header">
     <div id ="loading">
-        <img src="alterrace/public/assets/images/logo.png" alt="">
+        <img src="alterrace/assets/images/logo.png" alt="">
     </div>
     <!-- トップへ戻るボタン -->
     <div class="pagetop">
@@ -205,7 +205,7 @@ $newsList = $stmt->fetchAll(PDO::FETCH_ASSOC);
   // BASE_PATH を使ってファイルをインクルード
   include BASE_PATH . 'includes/footer.php';
   ?>
-  <script src="<?= BASE_URL ?>public/assets/js/main.js"></script>
-  <script src="<?= BASE_URL ?>public/assets/js/scrollTop.js"></script>
+  <script src="<?= BASE_URL ?>assets/js/main.js"></script>
+  <script src="<?= BASE_URL ?>assets/js/scrollTop.js"></script>
 </body>
 </html>

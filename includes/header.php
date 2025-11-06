@@ -1,7 +1,7 @@
 <header>
     <div class="headerMenu_logo">
-      <a href="<?= BASE_URL ?>public/index.php">
-        <img src="<?php echo BASE_URL; ?>public/assets/images/logo.png" alt="会社ロゴ" class ="headerMenu_logo_img">
+      <a href="<?= BASE_URL ?>index.php">
+        <img src="<?php echo BASE_URL; ?>assets/images/logo.png" alt="会社ロゴ" class ="headerMenu_logo_img">
       </a>
     </div>
     <nav class="headerMenu">

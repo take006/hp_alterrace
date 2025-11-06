@@ -22,15 +22,15 @@ $message = $_SESSION['message'] ?? ''; // セッションからメッセージ�
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CONTACT</title>
-    <link rel="stylesheet" href="<?= BASE_URL ?>public/assets/css/resetting.css">
-    <link rel="stylesheet" href="<?php echo BASE_URL; ?>public/assets/css/color.css">
-    <link rel="stylesheet" href="<?php echo BASE_URL; ?>public/assets/css/default.css">
-    <link rel="stylesheet" href="<?= BASE_URL ?>public/assets/css/header.css">
-    <link rel="stylesheet" href="<?= BASE_URL ?>public/assets/css/footer.css">
-    <link rel="stylesheet" href="<?php echo BASE_URL; ?>public/assets/css/element.css">
-    <link rel="stylesheet" href="<?php echo BASE_URL; ?>public/assets/css/link.css"">
-    <link rel="stylesheet" href="<?php echo BASE_URL; ?>public/assets/css/contact.css">
-    <link rel="stylesheet" href="<?php echo BASE_URL; ?>public/assets/css/form.css">
+    <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/resetting.css">
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/color.css">
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/default.css">
+    <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/header.css">
+    <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/footer.css">
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/element.css">
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/link.css"">
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/contact.css">
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/form.css">
 </head>
 <body>
   <?php
@@ -86,7 +86,7 @@ $message = $_SESSION['message'] ?? ''; // セッションからメッセージ�
 個人情報の取扱いについてにご同意のうえ、ご登録をお願い致します。</p>
         <p>当社個人情報の取扱いに同意する</p>
         <p><input type="checkbox" name="privacy" id="privacy">
-        <a href="<?= BASE_URL ?>app/views/others/privacy/index.php">" target="_blank" rel="noopener noreferrer">プライバシーポリシー</a>
+        <a href="<?= BASE_URL ?>app/views/others/privacy/index.php" target="_blank" rel="noopener noreferrer">プライバシーポリシー</a>
         に同意する</p>
         <!-- 確認ボタン -->
         <button class="submit-btn" type="submit">入力内容を確認する</button>

@@ -8,13 +8,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>採用情報</title>
-    <link rel="stylesheet" href="<?= BASE_URL ?>public/assets/css/resetting.css">
-    <link rel="stylesheet" href="<?= BASE_URL ?>public/assets/css/color.css">
-    <link rel="stylesheet" href="<?= BASE_URL ?>public/assets/css/default.css">
-    <link rel="stylesheet" href="<?= BASE_URL ?>public/assets/css/header.css">
-    <link rel="stylesheet" href="<?= BASE_URL ?>public/assets/css/footer.css">
-    <link rel="stylesheet" href="<?= BASE_URL ?>public/assets/css/element.css">
-    <link rel="stylesheet" href="<?= BASE_URL ?>public/assets/css/requirement.css">
+    <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/resetting.css">
+    <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/color.css">
+    <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/default.css">
+    <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/header.css">
+    <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/footer.css">
+    <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/element.css">
+    <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/requirement.css">
 </head>
 <body>
   <?php
@@ -35,7 +35,7 @@
       <section id="requirement-box-wrapper">
         <div class="requirement-box">
           <a href="<?= BASE_URL ?>app/views/company/rinenn/callCenter/index.phpp">
-          <img src="<?= BASE_URL ?>public/assets/images/other_images/recruit_woman_unsplash.avif" alt="">
+          <img src="<?= BASE_URL ?>assets/images/other_images/recruit_woman_unsplash.avif" alt="">
           <div class="text-wrapper">
             <p><b>コールセンター</b></p>
             <span class="tag">販売</span>
@@ -46,7 +46,7 @@
         </div>
         <div class="requirement-box">
         <a href="<?= BASE_URL ?>app/views/recruit/requirement/mobileShop/index.php">
-          <img src="<?= BASE_URL ?>public/assets/images/other_images/recruit_woman_unsplash.avif" alt="">
+          <img src="<?= BASE_URL ?>assets/images/other_images/recruit_woman_unsplash.avif" alt="">
           <div class="text-wrapper">
             <p><b>家電量販店モバイル販売</b></p>
             <span class="tag">販売</span>

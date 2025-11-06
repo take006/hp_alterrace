@@ -8,15 +8,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>募集要項：コールセンター</title>
-    <link rel="stylesheet" href="<?= BASE_URL ?>public/assets/css/resetting.css">
-    <link rel="stylesheet" href="<?= BASE_URL ?>public/assets/css/color.css">
-    <link rel="stylesheet" href="<?= BASE_URL ?>public/assets/css/default.css">
-    <link rel="stylesheet" href="<?= BASE_URL ?>public/assets/css/element.css">
-    <link rel="stylesheet" href="<?= BASE_URL ?>public/assets/css/header.css">
-    <link rel="stylesheet" href="<?= BASE_URL ?>public/assets/css/footer.css">
-    <link rel="stylesheet" href="<?= BASE_URL ?>public/assets/css/link.css"">
-    <link rel="stylesheet" href="<?= BASE_URL ?>public/assets/css/table.css">
-    <link rel="stylesheet" href="<?= BASE_URL ?>public/assets/css/requirement.css">
+    <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/resetting.css">
+    <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/color.css">
+    <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/default.css">
+    <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/element.css">
+    <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/header.css">
+    <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/footer.css">
+    <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/link.css"">
+    <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/table.css">
+    <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/requirement.css">
 </head>
 <body>
   <?php
@@ -29,7 +29,7 @@
       <p>Requirementw</p>
     </div>
     <ol id="readcrumb">
-      <li><a href="<?= BASE_URL ?>public/index.php">ホーム</a></li>
+      <li><a href="<?= BASE_URL ?>index.php">ホーム</a></li>
       <li><a href="<?= BASE_URL ?>app/views/recruit/index.php">採用情報</a></li>
       <li>募集要項：コールセンター</li>
     </ol>

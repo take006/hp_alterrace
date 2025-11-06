@@ -8,15 +8,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>沿革</title>
-    <link rel="stylesheet" href="<?= BASE_URL ?>public/assets/css/resetting.css">
-    <link rel="stylesheet" href="<?= BASE_URL ?>public/assets/css/color.css">
-    <link rel="stylesheet" href="<?= BASE_URL ?>public/assets/css/default.css">
-    <link rel="stylesheet" href="<?= BASE_URL ?>public/assets/css/element.css">
-    <link rel="stylesheet" href="<?= BASE_URL ?>public/assets/css/link.css"">
-    <link rel="stylesheet" href="<?= BASE_URL ?>public/assets/css/header.css">
-    <link rel="stylesheet" href="<?= BASE_URL ?>public/assets/css/footer.css">
-    <link rel="stylesheet" href="<?= BASE_URL ?>public/assets/css/ennkaku.css">
-    <link rel="stylesheet" href="<?= BASE_URL ?>public/assets/css/subpage.css">
+    <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/resetting.css">
+    <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/color.css">
+    <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/default.css">
+    <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/element.css">
+    <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/link.css"">
+    <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/header.css">
+    <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/footer.css">
+    <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/ennkaku.css">
+    <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/subpage.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </head>

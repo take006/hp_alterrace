@@ -10,12 +10,12 @@
     <title>代表挨拶</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="<?= BASE_URL ?>public/assets/css/resetting.css">
-    <link rel="stylesheet" href="<?= BASE_URL ?>public/assets/css/color.css">
-    <link rel="stylesheet" href="<?= BASE_URL ?>public/assets/css/default.css">
-    <link rel="stylesheet" href="<?= BASE_URL ?>public/assets/css/header.css">
-    <link rel="stylesheet" href="<?= BASE_URL ?>public/assets/css/footer.css">
-    <link rel="stylesheet" href="<?= BASE_URL ?>public/assets/css/daihyou.css">
+    <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/resetting.css">
+    <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/color.css">
+    <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/default.css">
+    <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/header.css">
+    <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/footer.css">
+    <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/daihyou.css">
 </head>
 <body>
   <?php
