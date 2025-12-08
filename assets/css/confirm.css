@@ -1,0 +1,106 @@
+/* assets/css/confirm.css
+   form と同じレイアウト（常に縦並び）
+*/
+:root{
+  --cText: #333;
+  --cAccent: #3498db;
+  --cAccentDark: #2980b9;
+  --cHeader: #2c3e50;
+  --cLabel: #34495e;
+  --cWhite: #fff;
+  --light-gray: #e6e6e6;
+  --radius: 6px;
+}
+
+/* 基本 */
+* { box-sizing: border-box; }
+body {
+  font-family: "Arial", sans-serif;
+  color: var(--cText);
+  margin: 0;
+  padding: 0;
+}
+
+h1.confirm-title {
+  text-align: center;
+  color: var(--cHeader);
+  margin: 24px 0;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* コンテナ（form と同じ幅感） */
+.confirm-form {
+  width: 100%;
+  max-width: 700px;
+  margin: 32px auto 56px;
+  background: var(--cWhite);
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+  padding: 24px;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* 各項目（常に縦並び） */
+.confirm-box {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 1.2rem;
+}
+
+/* ラベル（form の label と統一） */
+.confirm-label {
+  font-weight: 700;
+  color: var(--cLabel);
+  font-size: 1rem;
+}
+
+/* 入力内容（input と近い見た目） */
+.confirm-value p {
+  margin: 0;
+  background: #fafafa;
+  padding: 12px 14px;
+  border: 1px solid var(--light-gray);
+  border-radius: var(--radius);
+  white-space: pre-wrap;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* ボタン */
+.confirm-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+
+.btn--primary,
+.btn--secondary,
+input[type="submit"].btn--primary {
+  padding: 12px 22px;
+  border-radius: 8px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+}
+
+.btn--primary,
+input[type="submit"].btn--primary {
+  background: linear-gradient(135deg, var(--cAccent), var(--cAccentDark));
+  color: var(--cWhite);
+}
+
+.btn--secondary {
+  background: #ddd;
+  color: var(--cText);
+}
+
+/* フェード */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

@@ -1,8 +1,15 @@
-/* Loading */
+/* === 全体リセット（必要に応じ） === */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* === Loading（上書き） === */
 #loading {
   width: 100vw;
   height: 100vh;
-  transition: all 2s ease-in;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
   background-color: var(--cWhite);
   position: fixed;
   top: 0;
@@ -16,133 +23,172 @@
   width: 200px;
   height: auto;
 }
-
-.loaded {
+#loading.loaded {
   opacity: 0;
   visibility: hidden;
+  pointer-events: none;
+}
+
+/* === ヘッダー ===
+   スマホでも常に表示しつつスクロールで隠す場合は JS の .hidden を使う
+*/
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5000;            /* top-message より上にしたければ更に上げる */
+  width: 100%;
+  background: rgba(255,255,255,0.95);
+  transition: transform .28s ease, opacity .28s ease;
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+}
+
+/* ヘッダー非表示クラス（既存 JS と整合） */
+header.hidden {
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* === スライダー（全画面表示） ===
+   注意: ブラウザ互換のため dVh を先に、次に vh を指定しています。
+*/
+#top-slider {
+  position: relative;
+  width: 100%;
+  height: 100dvh;   /* modern browsers (dynamic viewport) */
+  height: 100vh;   /* fallback */
+  min-height: 380px; /* 任意：極端に小さい高さを防ぐ */
+  overflow: hidden;
+}
+
+/* コンテナ（念の為） */
+.slider-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* 各スライドは重ねて opacity で切り替える（display:none は使わない） */
+.slider-img {
+  position: absolute;
+  inset: 0;                 /* top:0; right:0; bottom:0; left:0 */
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out, transform 0.6s ease;
+  pointer-events: none;     /* 非表示時は操作不可 */
+  z-index: 1;
+  will-change: opacity;
+  display: block;
+}
+
+/* 表示中スライド */
+.slider-img.active {
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 2;
+}
+
+/* 画像は枠いっぱいにフィットして切り取り（縦横比が違っても画面いっぱい） */
+.slider-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;        /* ここが重要：contain -> cover に変更 */
+  object-position: center center;
+  display: block;
+}
+
+/* === top-message（常時表示） ===
+   header と重なり順を考慮して z-index を設定（header が上に来る場合は調整）
+*/
+.top-message {
+  position: absolute;               /* スライダー内に置く */
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  z-index: 3000;                    /* スライドより前面、header より下（必要なら増減） */
+  pointer-events: none;             /* 下のスライド操作を妨げない */
+  color: #ffffff;
+  text-shadow: 0 4px 18px rgba(0,0,0,0.45);
+}
+
+/* top-message 内のボタン等だけクリック可能にする */
+.top-message * {
+  pointer-events: auto;
+}
+
+/* レスポンシブ調整（タブレット以下） */
+@media (max-width: 1024px) {
+  .top-message { left: 8%; }
+  .top-message h2 { font-size: 40px; line-height: 1.05; }
+}
+
+/* スマホ用：必ずスライド表示が崩れないようにする */
+@media (max-width: 768px) {
+  #top-slider {
+    height: 100dvh;
+    height: 100vh;
+  }
+  .top-message {
+    left: 6%;
+    top: 55%;
+    transform: translateY(-55%);
+  }
+  .top-message h2 {
+    font-size: 28px;
+  }
+}
+
+/* 極小画面用 */
+@media (max-width: 480px) {
+  .top-message {
+    left: 5%;
+    top: 58%;
+    transform: translateY(-58%);
+  }
+  .top-message h2 {
+    font-size: 22px;
   }
 
+  /* 画像の指定を cover に統一（以前の contain を消す） */
+  .slider-img img {
+    object-fit: cover;
+  }
+}
 
-
+/* === フェードイン系（既存） === */
 .fade-in-top {
   opacity: 0;
   animation: fadein-top 1.5s .6s ease-out forwards;
 }
-
-
 @keyframes fadein-top {
- 0% {
-    opacity: 0;
-    transform: translateY(-30px);
- }
- 100% {
-    opacity: 1;
-    transform: translateY(0);
- }
+  0% { opacity: 0; transform: translateY(-30px); }
+ 100% { opacity: 1; transform: translateY(0); }
 }
 
-
-
-/*Javascriptの全要素fadeIn */
 .fadeIn {
-  /*追加*/
   opacity: 0;
   visibility: hidden;
-  transition: all 2s;
+  transition: all 0.8s ease;
   transform: translateY(150px);
 }
-
 .is-active {
-  /*要素を表示させる*/
   opacity: 1;
   visibility: visible;
-  /*元の位置に戻す*/
   transform: translateY(0);
 }
 
-.wrapper {
-  text-align: center;
-}
+/* === 小さな安全措置 === */
+/* 既存で display:none を使っている場合に残らないように上書き */
+.slider-img[style*="display:none"] { display: block !important; }
 
-
-
-#top-slider {
-  height: 100dvh;
-  width: auto;
-  position: relative;
-}
-
-.top-message {
-  position: absolute;
-  top: 45%;
-  left: 10rem;
-}
-.top-message h2 {
-  color: #fff;
-  font-size: 48px;
-}
-/* スライドショー */
-.slider-img {
-  overflow: hidden;
-  height: 100dvh;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: fade 5s ease-in-out;
-  display: none;
-}
-
-@keyframes fade {
-  0% {
-      opacity: 0;
-  }
-
-  25% {
-      opacity: 1;
-  }
-  85% {
-      opacity: 1;
-  }
-
-  100% {
-      opacity: 0;
-  }
-
-}
-
-.slider-img img {
-  height: 100vh;
-  width: auto;
-  object-fit: contain;
-}
-.slider-img.active {
-  display: block;
-}
-
-@media (max-width:480px) {
-  .top-message {
-    left: 2rem;
-  }
-  .top-message h2 {
-    font-size: 36px;
-  }
-}
-
-
-@media (max-width: 768px) {
-  #top-slider {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-}
-@media (max-width: 480px) {
-  .slider-img img {
-    height: 100dvh;
-    width: auto;
-    object-fit: contain;
-  }
+/* pointer-events の扱いで、top-message 内のリンクやボタンを操作できるように */
+.top-message a,
+.top-message button {
+  pointer-events: auto;
 }
 
 /* コンテンツ */

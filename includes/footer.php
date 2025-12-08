@@ -16,9 +16,13 @@
             </ul>
             <ul class="footer-menu-list">
               <li class="footer-menu-list_item"><a href="<?= BASE_URL ?>app/views/recruit/index.php">採用</a></li>
+              <li class="footer-menu-list_item"><a href="<?= BASE_URL ?>app/views/recruit/requirement/index.php">募集要項</a></li>
             </ul>
             <ul class="footer-menu-list">
               <li class="footer-menu-list_item"><a href="<?= BASE_URL ?>app/views/news/index.php">ニュース</a></li>
+            </ul>
+            <ul class="footer-menu-list">
+              <li class="footer-menu-list_item"><a href="<?= BASE_URL ?>app/views/contact/formx.php">お問い合わせ</a></li>
             </ul>
           </div>
       </div>
