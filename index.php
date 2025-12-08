@@ -157,26 +157,6 @@ $newsList = $stmt->fetchAll(PDO::FETCH_ASSOC);
         </div>
         <div class="empty-box"></div>
       </section>
-
-      <section id="company" class="fadeIn">
-        <div class="company-wrapper">
-          <div class="c-title-inner">
-            <h2 class="sectionTitle text-center">私たちについて</h2>
-            <P class="sectionSubTitle text-center">ABOUT US</P>
-          </div>
-          <div class="company-text-inner">
-            <h3>「お客様との信頼を築くプロフェッショナル」</h3>
-            <p>お客様との信頼関係を第一に考え、丁寧で親切な対応を心掛けています。通信技術の進化を取り入れた最適なソリューションを提供し、企業のビジネス成長を支援します。</p>
-          </div>
-        </div>
-        <div class="btnBox_center">
-                <a href="<?= BASE_URL ?>app/views/company/index.php" class="gradient_button large_button">
-                  <span class="btnText">会社情報へ</span>
-                </a>
-              </div>
-        <div class="empty-box"></div>
-      </section>
-
       <section id="recruit" class="fadeIn">
         <div class="recruit-wrapper">
           <h2 class="sectionTitle text-center">採用</h2>

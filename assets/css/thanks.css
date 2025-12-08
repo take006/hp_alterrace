@@ -1,0 +1,146 @@
+:root{
+  --cText: #333;
+  --cHeader: #2c3e50;
+  --cAccent: #3498db;
+  --cAccentDark: #2980b9;
+  --light-gray: #e9e9e9;
+  --card-bg: #ffffff;
+  --radius: 10px;
+  --gap: 16px;
+  --max-width: 700px;
+}
+
+/* リセットに依存するが安全側の box-sizing */
+* { box-sizing: border-box; }
+
+body {
+  font-family: "Arial", sans-serif;
+  color: var(--cText);
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #fbfcfd;
+}
+
+/* メイン領域のセンタリング */
+main {
+  padding: 28px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 220px); /* header/footer を考慮 */
+}
+
+/* カードコンテナ（form.css と整合） */
+.thanks-card {
+  width: 100%;
+  max-width: var(--max-width);
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: 0 10px 24px rgba(20,40,60,0.06);
+  padding: 28px 24px;
+  text-align: center;
+  animation: fadeIn .9s ease-in-out;
+}
+
+/* 見出し */
+.thanks-card h1 {
+  margin: 6px 0 8px;
+  color: var(--cHeader);
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* 本文 */
+.thanks-card p {
+  margin: 12px 0 18px;
+  color: #555;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+/* アイコン風の成功表示（CSSのみ）*/
+.thanks-icon {
+  width: 84px;
+  height: 84px;
+  margin: 0 auto 14px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, rgba(52,152,219,0.12), rgba(41,128,185,0.06));
+  border: 1px solid rgba(52,152,219,0.12);
+  color: var(--cAccent);
+  font-size: 40px;
+  line-height: 1;
+}
+
+/* ボタンボックス（中央） */
+.btnBox {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+/* 汎用ボタン（form と統一） */
+.btn--primary,
+.btn--secondary,
+.btnBox a,
+.btnBox button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 22px;
+  border-radius: 8px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* プライマリ（グラデ）*/
+.btn--primary,
+.btnBox a.btn--primary {
+  background: linear-gradient(135deg, var(--cAccent), var(--cAccentDark));
+  color: #fff;
+  box-shadow: 0 6px 14px rgba(41,128,185,0.12);
+}
+
+/* セカンダリ（薄）*/
+.btn--secondary,
+.btnBox a.btn--secondary {
+  background: #f5f6f8;
+  color: var(--cText);
+  border: 1px solid var(--light-gray);
+}
+
+/* ホバー/フォーカス */
+.btn--primary:hover,
+.btnBox a.btn--primary:hover { transform: translateY(-2px); }
+.btn--primary:focus,
+.btnBox a.btn--primary:focus { outline: 3px solid rgba(52,152,219,0.15); outline-offset: 3px; }
+
+/* レスポンシブ調整（モバイルファースト） */
+@media (max-width: 480px) {
+  .thanks-card { padding: 18px; border-radius: 8px; }
+  .thanks-card h1 { font-size: 1.4rem; }
+  .thanks-icon { width: 72px; height: 72px; font-size: 34px; }
+  .btn--primary, .btn--secondary, .btnBox a { padding: 10px 12px; font-size: 0.95rem; width: 48%; }
+}
+
+/* デスクトップ微調整 */
+@media (min-width: 769px) {
+  main { padding: 40px 20px; }
+  .thanks-card { padding: 36px 40px; }
+  .thanks-card h1 { font-size: 1.8rem; }
+  .btnBox { justify-content: center; gap: 14px; }
+}
+
+/* アニメーション */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

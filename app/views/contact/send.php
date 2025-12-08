@@ -1,4 +1,13 @@
 <?php
+
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+include_once dirname(__DIR__, 3) . '/config/config.php'; 
+include_once dirname(__DIR__, 3) . '/app/DefaultInit.php';
+include_once dirname(__DIR__, 3) . '/app/SessionLifeTime.php';
+include_once dirname(__DIR__, 3) . '/includes/functions.php';
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
@@ -14,20 +23,18 @@ if ($isLocal) {
     require dirname(__DIR__, 4) . '/vendor/autoload.php';
 }
 
-session_start();
 
 
 // セッションからデータを取得
-$firstName = $_SESSION['firstName'] ?? '';
-$lastName = $_SESSION['lastName'] ?? '';
 $title = $_SESSION['title'] ?? '';
 $companyName = $_SESSION['companyName'] ?? '';
+$firstName = $_SESSION['firstName'] ?? '';
+$lastName = $_SESSION['lastName'] ?? '';
 $phoneNumber = $_SESSION['phoneNumber'] ?? '';
 $email = $_SESSION['email'] ?? '';
 $message = $_SESSION['message'] ?? '';
+$_SESSION = array();
 
-// 環境の判定（XAMPP か Xserver か）
-$isLocal = ($_SERVER['SERVER_NAME'] === 'localhost' || strpos($_SERVER['SERVER_NAME'], '127.0.0.1') !== false);
 
 // メール送信の設定のためインスタンス化
 $mail = new PHPMailer(true);
@@ -45,11 +52,12 @@ try {
         $mail->Password   = 'kojlqraouovtibzy';  // Gmailのアプリパスワード
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port       = 587;
-        $mail->setFrom('your-email@gmail.com', 'お問い合わせフォーム');
+        $mail->setFrom('take088917761@gmail.com', 'アルテラス株式会社');
     } else {
         // Xserver（本番環境）: Xserver の `mail()` 関数を利用
         $mail->isMail();
-        $mail->setFrom('admin@xs342072.xsrv.jp', 'お問い合わせフォーム'); // Xserver のドメインメールを使用
+        // Xserver のドメインメールを使用
+        $mail->setFrom('admin@xs342072.xsrv.jp', 'お問い合わせフォーム'); 
     }
 
     // 宛先
@@ -67,7 +75,7 @@ try {
 
     // メール送信メソッド
     if ($mail->send()) {
-        header("Location: thank_you.php");
+        header("Location: thanks.php");
         exit;
     } else {
         header("Location: error.php?message=" . urlencode('メールの送信に失敗しました。'));
