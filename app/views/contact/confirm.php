@@ -142,9 +142,7 @@ if(count($err)>0){
       <input type="submit" value="送信する" class="btn--primary">
     </div>
   </form>
-</main>
-
-    </main>
+  </main>
     <?php include BASE_PATH . 'includes/footer.php' ?>
 </body>
 </html>

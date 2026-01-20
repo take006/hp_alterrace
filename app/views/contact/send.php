@@ -38,7 +38,7 @@ if ($isLocal) {
     require dirname(__DIR__, 3) . '/vendor/autoload.php'; } 
     else {
          // 本番 (例: StarServer)
-         require dirname(__DIR__, 3) . '/vendor/autoload.php'; 
+    require dirname(__DIR__, 3) . '/vendor/autoload.php'; 
     }
 
 $mail = new PHPMailer(true);
