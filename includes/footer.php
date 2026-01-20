@@ -36,5 +36,5 @@
         <p class ="footer_copy-right-text">&copy; Copyright 2024 Alterrace Inc. All rights reserved</p>
       </div>
     </section>
-    <script src="<?= BASE_URL ?>public/assets/js/main.js"></script>
+
   </footer>
