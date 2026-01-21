@@ -27,33 +27,33 @@
       <p>会社概要</p>
     </div>
     <ol id="readcrumb">
-      <li><a href="<?= BASE_URL ?>public/index.php">ホーム</a></li>
+      <li><a href="<?= BASE_URL ?>index.php">ホーム</a></li>
       <li>COMPANY</li>
     </ol>
     <div class="empty-box"></div>
     <section id="company-box-wrapper">
-      <div class="company-box">
-        <a href="<?= BASE_URL ?>app/views/company/rinenn/index.php">
-          <img src="https://picsum.photos/1920/1080" alt="">
-          <p><b>企業理念</b></p>
-        </a>
-      </div>
-      <div class="company-box">
-        <a href="<?= BASE_URL ?>app/views/company/daihyou/index.php">
-          <img src="https://picsum.photos/1920/1080" alt="">
-          <p><b>代表挨拶</b></p>
-        </a>
-      </div>
-      <div class="company-box">
-        <a href="<?= BASE_URL ?>app/views/company/ennkaku/index.php">
-          <img src="https://picsum.photos/1920/1080" alt="">
-          <p><b>沿革</b></p>
-        </a>
-      </div>
-      <div class="company-box">
+      <div class="company-card">
         <a href="<?= BASE_URL ?>app/views/company/gaiyou/index.php">
-          <img src="https://picsum.photos/1920/1080" alt="">
-          <p><b>会社概要</b></p>
+          <span class="card-title">会社概要</span>
+          <span class="card-arrow">›</span>
+        </a>
+      </div>
+      <div class="company-card">
+        <a href="<?= BASE_URL ?>app/views/company/daihyou/index.php">
+          <span class="card-title">代表挨拶</span>
+          <span class="card-arrow">›</span>
+        </a>
+      </div>
+      <div class="company-card">
+        <a href="<?= BASE_URL ?>app/views/company/rinenn/index.php">
+          <span class="card-title">企業理念</span>
+          <span class="card-arrow">›</span>
+        </a>
+      </div>
+      <div class="company-card">
+        <a href="<?= BASE_URL ?>app/views/company/ennkaku/index.php">
+          <span class="card-title">沿革</span>
+          <span class="card-arrow">›</span>
         </a>
       </div>
     </section>
