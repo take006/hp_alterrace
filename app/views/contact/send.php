@@ -27,19 +27,12 @@ $mail_body =
     . "■ 電話番号\n$phoneNumber\n\n"
     . "■ お問い合わせ内容\n$message\n";
 
-    // PHPMailerで使用する変数や関数をカプセル化する
+// PHPMailerで使用する変数や関数をカプセル化する
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
-// サーバー名で環境を判定
-$isLocal = ($_SERVER['SERVER_NAME'] === 'localhost' || strpos($_SERVER['SERVER_NAME'], '127.0.0.1') !== false); 
+
 // autoloadの読み込み
-if ($isLocal) { 
-    // ローカル (例: XAMPP) 
-    require dirname(__DIR__, 3) . '/vendor/autoload.php'; } 
-    else {
-         // 本番 (例: StarServer)
-    require dirname(__DIR__, 3) . '/vendor/autoload.php'; 
-    }
+require dirname(__DIR__, 3) . '/vendor/autoload.php';
 
 $mail = new PHPMailer(true);
 $mail->CharSet = 'utf-8';
@@ -48,10 +41,19 @@ try {
     $mail->isSMTP();
     $mail->Host       = HOST_SMTP;
     $mail->SMTPAuth   = true;
-    $mail->Username   = HOST_MAIL_ADDRESS;  // 送信元Gmailアドレス
-    $mail->Password   = HOST_MAIL_PASSWORD;  // Gmailのアプリパスワード
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-    $mail->Port       = 587;
+    $mail->Username   = HOST_MAIL_ADDRESS;
+    $mail->Password   = HOST_MAIL_PASSWORD;
+    
+    // 環境に応じてセキュリティ設定を変更
+    if (ENVIRONMENT === 'production') {
+        // Xserver用
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+        $mail->Port       = 587;
+    } else {
+        // ローカル/Gmail用
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+        $mail->Port       = 587;
+    }
 
     $mail->setFrom(HOST_MAIL_ADDRESS, 'アルテラス株式会社');
     // 宛先
