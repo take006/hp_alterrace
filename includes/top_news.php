@@ -20,7 +20,7 @@
                         <?php endforeach; ?>
                     </div>
                     <div class="news-title">
-                        <a href="<?= BASE_URL ?>app/views/news/news_detail.php?id=<?= $news['id'] ?>">
+                        <a href="<?= BASE_URL ?>app/Views/news/news_detail.php?id=<?= $news['id'] ?>">
                             <?= htmlspecialchars($news['title']) ?>
                         </a>
                     </div>
@@ -28,7 +28,7 @@
             <?php endforeach; ?>
         </div>
         <div class="news_btn">
-            <a href="<?= BASE_URL ?>app/views/news/index.php" class="gradient_button middle_button">
+            <a href="<?= BASE_URL ?>app/Views/news/index.php" class="gradient_button middle_button">
               <span class="btnText">ニュース一覧へ</span>
             </a>
         </div>
