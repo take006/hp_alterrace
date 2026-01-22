@@ -2,7 +2,7 @@
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
-include_once dirname(__DIR__) . '/config/config.php';
+include_once dirname(__DIR__, 3) . '/config/config.php';
 if (!defined('BASE_PATH')) {
     define('BASE_PATH', dirname(__DIR__) . '/../../');
 }

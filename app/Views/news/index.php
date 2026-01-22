@@ -1,5 +1,5 @@
 <?php
-include_once dirname(__DIR__) . '/config/config.php';
+include_once dirname(__DIR__, 3) . '/config/config.php';
 if (!defined('BASE_PATH')) {
     define('BASE_PATH', dirname(__DIR__) . '/../../');
 }
@@ -27,7 +27,6 @@ $newsList = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/color.css">
     <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/element.css">
     <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/default.css">
-    <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/link.css">
     <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/news.css">
 
 </head>
