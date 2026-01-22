@@ -7,19 +7,19 @@
     <nav class="headerMenu">
       <ul class="headerMenu_list">
           <li class="headerMenu_list_item">
-            <a href="<?= BASE_URL ?>app/views/business/index.php">事業内容</a>
+            <a href="<?= BASE_URL ?>app/Views/business/index.php">事業内容</a>
           </li>
           <li class="headerMenu_list_item">
-            <a href="<?= BASE_URL ?>app/views/company/index.php">会社情報</a>
+            <a href="<?= BASE_URL ?>app/Views/company/index.php">会社情報</a>
           </li>
           <li class="headerMenu_list_item">
-            <a href="<?= BASE_URL ?>app/views/recruit/index.php">採用</a>
+            <a href="<?= BASE_URL ?>app/Views/recruit/index.php">採用</a>
           </li>
           <li class="headerMenu_list_item">
-            <a href="<?= BASE_URL ?>app/views/news/index.php">ニュース</a>
+            <a href="<?= BASE_URL ?>app/Views/news/index.php">ニュース</a>
           </li>
           <li class="headerMenu_list_item-b">
-            <a href="<?= BASE_URL ?>app/views/contact/form.php" class="gradient_button header_button">
+            <a href="<?= BASE_URL ?>app/Views/contact/form.php" class="gradient_button header_button">
               <span class="btnText">お問い合わせ</span>
             </a>
           </li>
@@ -38,19 +38,19 @@
         <nav>
             <ul>
               <li class="fa-solid">
-                <a href="<?= BASE_URL ?>app/views/business/index.php">事業内容</a>
+                <a href="<?= BASE_URL ?>app/Views/business/index.php">事業内容</a>
               </li>
               <li class="fa-solid">
-                <a href="<?= BASE_URL ?>app/views/company/index.php">会社情報</a>
+                <a href="<?= BASE_URL ?>app/Views/company/index.php">会社情報</a>
               </li>
               <li class="fa-solid">
-                <a href="<?= BASE_URL ?>app/views/recruit/index.php">採用</a>
+                <a href="<?= BASE_URL ?>app/Views/recruit/index.php">採用</a>
               </li>
               <li class="fa-solid">
-                <a href="<?= BASE_URL ?>app/views/news/index.php">ニュース</a>
+                <a href="<?= BASE_URL ?>app/Views/news/index.php">ニュース</a>
               </li>
               <li class="fa-solid">
-                <a href="<?= BASE_URL ?>app/views/contact/form.php">お問い合わせ</a>
+                <a href="<?= BASE_URL ?>app/Views/contact/form.php">お問い合わせ</a>
               </li>
             </ul>
         </nav>

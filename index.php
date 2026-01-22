@@ -2,10 +2,8 @@
 <?php
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
-?>
 
-<?php
-  // config.php を読み込む
+// config.php を読み込む
 include __DIR__ . '/config/config.php';
 require_once __DIR__ . '/config/database.php';
 
@@ -150,9 +148,9 @@ $newsList = $stmt->fetchAll(PDO::FETCH_ASSOC);
         </div>
         <div class="company-container">
           <ul>
-            <li><a href="<?= BASE_URL ?>app/views/company/gaiyou/index.php"><h4>会社概要</h4></a></li>
-            <li><a href="<?= BASE_URL ?>app/views/company/daihyou/index.php"><h4>代表挨拶</h4></a></li>
-            <li><a href="<?= BASE_URL ?>app/views/company/ennkaku/index.php"><h4>沿革</h4></a></li>
+            <li><a href="<?= BASE_URL ?>app/Views/company/gaiyou/index.php"><h4>会社概要</h4></a></li>
+            <li><a href="<?= BASE_URL ?>app/Views/company/daihyou/index.php"><h4>代表挨拶</h4></a></li>
+            <li><a href="<?= BASE_URL ?>app/Views/company/ennkaku/index.php"><h4>沿革</h4></a></li>
           </ul>
         </div>
         <div class="empty-box"></div>
@@ -171,7 +169,7 @@ $newsList = $stmt->fetchAll(PDO::FETCH_ASSOC);
             </div>
           </div>
           <div class="recruit-btn-box">
-            <a href="<?= BASE_URL ?>app/views/recruit/index.php" class="gradient_button large_button">
+            <a href="<?= BASE_URL ?>app/Views/recruit/index.php" class="gradient_button large_button">
               <span class="btnText">採用ページへ</span>
             </a>
           </div>
