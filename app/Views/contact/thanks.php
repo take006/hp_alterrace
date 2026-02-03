@@ -28,7 +28,7 @@ if (!defined('BASE_PATH')) {
   <h1>お問い合わせを送信しました</h1>
   <p>お問い合わせありがとうございました。<br>数日以内にご連絡いたします。</p>
   <div class="btnBox">
-    <a class="btn--primary" href="<?= BASE_URL ?>index.php">ホームへ戻る</a>
+    <a class="btn--primary" href="<?= BASE_URL ?>app/Views/contact/form.php">お問い合わせページへ戻る</a>
   </div>
 </div>
     </main>

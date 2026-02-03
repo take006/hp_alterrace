@@ -22,15 +22,14 @@ include_once dirname(__DIR__, 3) . '/config/config.php';
     include BASE_PATH . 'includes/header.php';
   ?>
   <main>
-        <ol id="readcrumb">
-      <li><a href="<?= BASE_URL ?>index.php">ホーム</a></li>
-      <li>COMPANY</li>
-    </ol>
     <div class="page-title-wrapper">
       <h1 class="main-title">COMPANY</h1>
       <p>会社概要</p>
     </div>
-
+    <ol id="readcrumb">
+      <li><a href="<?= BASE_URL ?>index.php">ホーム</a></li>
+      <li>COMPANY</li>
+    </ol>
     <div class="empty-box"></div>
     <section id="company-box-wrapper">
       <div class="company-card">

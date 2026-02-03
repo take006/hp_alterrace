@@ -36,7 +36,6 @@ $_SESSION = array();
     <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/header.css">
     <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/footer.css">
     <link rel="stylesheet" href="<?= BASE_URL; ?>assets/css/element.css">
-    <link rel="stylesheet" href="<?= BASE_URL; ?>assets/css/link.css">
     <link rel="stylesheet" href="<?= BASE_URL; ?>assets/css/contact.css">
     <link rel="stylesheet" href="<?= BASE_URL; ?>assets/css/form.css">
 </head>
@@ -81,7 +80,7 @@ $_SESSION = array();
         </div>
         <div class="input-wrapper">
           <label for="phoneNumber" class="label-item-any">電話番号</label>
-          <input class="input-item" type="tel" placeholder="000-0000-0000" name="phoneNumber" id="name" value="<?= htmlspecialchars($phoneNumber, ENT_QUOTES, 'UTF-8') ?>" required>
+          <input class="input-item" type="tel" placeholder="000-0000-0000" name="phoneNumber" id="name" value="<?= htmlspecialchars($phoneNumber, ENT_QUOTES, 'UTF-8') ?>">
         </div>
         <div class="input-wrapper">
           <label for="message" class="label-item">お問い合わせ内容</label>
